@@ -1,3 +1,7 @@
+# draft-frame
+simple web app to view draft frames and comparing choices
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
