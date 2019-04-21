@@ -1,29 +1,45 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-            What if I do this?
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+function App() {
+
+  const baseAPI = "https://api.scryfall.com"
+
+  const [card, setCard] = useState({});
+  const [image, setImage] = useState('');
+
+  useEffect(() =>{
+    getNewCard()
+    }, []);
+
+  function getNewCard() {
+    fetch(baseAPI + '/cards/random')
+      .then(response => response.json())
+      .then(data => {
+        setCard(data);
+        setImage(data.image_uris.normal)
+      })
+      .catch(error => console.log(error));
+  };
+
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+    Look at a random card
+        </p>
+      <button onClick ={getNewCard}>
+        Get a new card!
+      </button>
+    <img src = {image} alt = 'Loading...'/>
+    <p>{card.name} </p>
+
+      </header>
+    </div>
+  );
 }
 
 export default App;
