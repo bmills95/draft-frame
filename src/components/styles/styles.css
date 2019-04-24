@@ -1,0 +1,14 @@
+.Collection .grid-container {
+  display: grid; }
+
+.Collection img {
+  width: 144px;
+  height: 200px; }
+
+.Pack .grid-container {
+  display: grid;
+  grid-template: auto auto auto auto auto; }
+
+.Pack img {
+  width: 144px;
+  height: 200px; }

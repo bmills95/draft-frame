@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/pack.css';
+import './styles/styles.css';
 
 function Pack(props) {
 

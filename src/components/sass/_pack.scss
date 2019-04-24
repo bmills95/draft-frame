@@ -1,0 +1,11 @@
+.Pack{
+  .grid-container {
+  display: grid;
+  grid-template: auto auto auto auto auto;
+  }
+
+  img {
+    width : 144px;
+    height : 200px;
+  }
+}
