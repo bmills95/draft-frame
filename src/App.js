@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Pack from './components/pack.js'
 import Collection from './components/collection.js'
 
-import './App.css';
+import './components/styles/styles.css';
 
 function App() {
 
@@ -18,11 +18,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Draft Frame</h1>
+        <h2>Make a Pick!</h2>
       </header>
-      <body className="App-body">
+      <div className="App-body">
         <Pack cards={['Shock', 'Absorb', 'Aven_Sentry', 'Breeding_Pool']}/>
         <Collection cards={['Deeproot_Waters','Deeproot_Waters','Deeproot_Waters']}/>
-      </body>
+      </div>
     </div>
   );
 }

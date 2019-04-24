@@ -6,9 +6,13 @@ function Collection(props) {
   let {cards} = props
 
   //turn card list into images of cards
-  let cardImages = cards.map((card) => {
+  let cardImages = cards.map((card,index) => {
     return(
-      <img src={"images/" + card + ".jpg"} alt={card} />
+      <img
+        src={"images/" + card + ".jpg"}
+        alt={card}
+        key={index}
+      />
     )
   });
 

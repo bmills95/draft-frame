@@ -1,11 +1,14 @@
 .Pack{
   .grid-container {
   display: grid;
-  grid-template: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap:10px;
   }
 
   img {
     width : 144px;
     height : 200px;
+    // outline-style: solid;
+    // outline-color: red;
   }
 }
