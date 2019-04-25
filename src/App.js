@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Pack from './components/pack.js'
 import Collection from './components/collection.js'
+import Dropzone from 'react-dropzone'
 
 import './components/styles/styles.css';
 
 function App() {
 
-  const [card, setCard] = useState('');
+  //const [draft, setDraft] = useState();
   //const [collection, setCollection] = useState([])
-
-  useEffect(() => {
-    setCard('Shock');
-  });
-
-  console.log('./data/images/' + card + '.jpg')
+  let draft = {
+    "pack": ["Enter_the_God-Eternals", "Bloom_Hulk", "Deathsprout", "Makeshift_Battalion", "Gateway_Plaza", "Dreadhorde_Butcher", "Martyr_for_the_Cause", "Samut's_Sprint", "Goblin_Assault_Team", "Davriel's_Shadowfugue", "Return_to_Nature", "Charmed_Stray", "Steady_Aim", "Kasmina's_Transmutation"],
+    "pick": "Enter_the_God-Eternals",
+    "collection": ["Awakening_of_Vitu-Ghazi", "Tyrant's_Scorn", "Huatli's_Raptor", "Arboreal_Grazer", "Loxodon_Sergeant", "Defiant_Strike", "Devouring_Hellion", "Turret_Ogre", "Vivien's_Grizzly", "Ahn-Crop_Invader", "Goblin_Assailant", "Grim_Initiate", "Kronch_Wrangler", "Forced_Landing"]
+  }
 
   return (
     <div className="App">
@@ -23,9 +23,9 @@ function App() {
       </header>
       <div className="App-body">
         <h3>Pack</h3>
-        <Pack cards={['Shock', 'Absorb', 'Aven_Sentry', 'Breeding_Pool']}/>
+        <Pack cards={draft.pack}/>
         <h3>Collection</h3>
-        <Collection cards={['Deeproot_Waters','Deeproot_Waters','Deeproot_Waters']}/>
+        <Collection cards={draft.collection}/>
       </div>
     </div>
   );
