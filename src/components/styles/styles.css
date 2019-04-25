@@ -37,7 +37,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin); }
+  font-size: calc(10px + 2vmin);
+  color: white; }
+  .App-body h3 {
+    color: white; }
+  .App-body .grid-container {
+    display: grid;
+    grid-template-areas: "Sidebar Description Description" "Sidebar Pack Pack" "Sidebar Collection Collection"; }
 
 .App-link {
   color: #61dafb; }

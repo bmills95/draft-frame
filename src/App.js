@@ -22,7 +22,9 @@ function App() {
         <h2>Make a Pick!</h2>
       </header>
       <div className="App-body">
+        <h3>Pack</h3>
         <Pack cards={['Shock', 'Absorb', 'Aven_Sentry', 'Breeding_Pool']}/>
+        <h3>Collection</h3>
         <Collection cards={['Deeproot_Waters','Deeproot_Waters','Deeproot_Waters']}/>
       </div>
     </div>
